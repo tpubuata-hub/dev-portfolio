@@ -2,7 +2,7 @@ import { contacts } from '../data/content';
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-black py-12 px-6">
+    <footer className="border-t border-white/10 bg-black/60 backdrop-blur-sm py-12 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           <div>

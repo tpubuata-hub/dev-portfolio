@@ -21,3 +21,21 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+/* Sits above the LiquidChrome canvas (z-index 0) and below the page
+   content (z-index 10): a light overall darken plus an edge vignette so
+   the animated background reads as texture, not a distraction. */
+.bg-scrim {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0.45);
+}
+.bg-vignette {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, transparent 40%, rgba(0, 0, 0, 0.65) 100%);
+}
