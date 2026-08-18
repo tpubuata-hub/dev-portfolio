@@ -13,7 +13,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full bg-black/80 backdrop-blur-md z-50 border-b border-white/10">
+    <nav className="fixed top-0 w-full bg-black/90 backdrop-blur-md z-50 border-b border-white/10">
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         <a href="#home" className="text-xl font-bold tracking-wider">
           {contacts.brand.toUpperCase()}

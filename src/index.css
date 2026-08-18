@@ -23,19 +23,40 @@ html {
 }
 
 /* Sits above the LiquidChrome canvas (z-index 0) and below the page
-   content (z-index 10): a light overall darken plus an edge vignette so
+   content (z-index 10): a heavy overall darken plus an edge vignette so
    the animated background reads as texture, not a distraction. */
 .bg-scrim {
   position: fixed;
   inset: 0;
   z-index: 1;
   pointer-events: none;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.7);
 }
 .bg-vignette {
   position: fixed;
   inset: 0;
   z-index: 2;
   pointer-events: none;
-  background: radial-gradient(ellipse at center, transparent 40%, rgba(0, 0, 0, 0.65) 100%);
+  background: radial-gradient(ellipse at center, transparent 30%, rgba(0, 0, 0, 0.85) 100%);
+}
+
+/* Placed as the first (absolutely-positioned) child inside a
+   `position: relative` section. Frosts whatever shows through behind the
+   section — strongest right at the section's top/bottom divider lines,
+   fading toward the middle, but capped at a 35% floor so the center of
+   a tall section never goes fully sharp. */
+.section-edge-blur {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.35) 50%, rgba(0, 0, 0, 1) 100%);
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.35) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
 }

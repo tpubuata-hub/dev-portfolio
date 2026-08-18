@@ -1,9 +1,11 @@
 import { projects } from '../data/content';
+import SectionBlur from './SectionBlur';
 
 export default function Portfolio() {
   return (
-    <section id="portfolio" className="py-20 px-6 border-t border-white/10">
-      <div className="max-w-6xl mx-auto">
+    <section id="portfolio" className="relative py-20 px-6 border-t border-white/10">
+      <SectionBlur />
+      <div className="relative z-10 max-w-6xl mx-auto">
         <h2 className="text-5xl font-bold text-white mb-4">Портфолио</h2>
         <p className="text-white/60 mb-12">Избранные проекты, над которыми я работал</p>
 
@@ -25,7 +27,7 @@ export default function Portfolio() {
                   </div>
                 </div>
 
-                <div className="md:col-span-2 p-8 flex flex-col justify-between bg-white/[0.02] backdrop-blur-sm">
+                <div className="md:col-span-2 p-8 flex flex-col justify-between bg-black/50 backdrop-blur-sm">
                   <div>
                     <span className="text-xs font-bold text-white/50 uppercase tracking-widest">
                       {project.category}

@@ -1,10 +1,12 @@
 import { ChevronRight } from 'lucide-react';
 import { process } from '../data/content';
+import SectionBlur from './SectionBlur';
 
 export default function Process() {
   return (
-    <section id="process" className="py-20 px-6 border-t border-white/10">
-      <div className="max-w-6xl mx-auto">
+    <section id="process" className="relative py-20 px-6 border-t border-white/10">
+      <SectionBlur />
+      <div className="relative z-10 max-w-6xl mx-auto">
         <h2 className="text-5xl font-bold text-white mb-4">Процесс работы</h2>
         <p className="text-white/60 mb-12">Как я работаю с клиентами</p>
 

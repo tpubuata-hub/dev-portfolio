@@ -17,13 +17,13 @@ export default function Hero() {
           <div className="flex gap-4">
             <a
               href="#contact"
-              className="px-8 py-3 bg-white text-black font-semibold hover:bg-white/90 transition"
+              className="px-8 py-3 bg-white text-black font-semibold hover:bg-white/90 transition-all duration-300 ease-out hover:scale-[1.15]"
             >
               Заказать консультацию
             </a>
             <a
               href="#portfolio"
-              className="px-8 py-3 border border-white/30 text-white font-semibold hover:border-white transition flex items-center gap-2"
+              className="px-8 py-3 border border-white/30 text-white font-semibold hover:border-white transition-all duration-300 ease-out hover:scale-[1.15] flex items-center gap-2"
             >
               Смотреть работы <ChevronRight size={18} />
             </a>

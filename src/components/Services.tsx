@@ -1,9 +1,14 @@
 import { services } from '../data/content';
+import SectionBlur from './SectionBlur';
 
 export default function Services() {
   return (
-    <section id="services" className="py-20 px-6 border-t border-white/10 bg-white/[0.02] backdrop-blur-sm">
-      <div className="max-w-6xl mx-auto">
+    <section
+      id="services"
+      className="relative py-20 px-6 border-t border-white/10 bg-black/40 backdrop-blur-sm"
+    >
+      <SectionBlur />
+      <div className="relative z-10 max-w-6xl mx-auto">
         <h2 className="text-5xl font-bold text-white mb-4">Услуги</h2>
         <p className="text-white/60 mb-12">Что я могу для вас сделать</p>
 

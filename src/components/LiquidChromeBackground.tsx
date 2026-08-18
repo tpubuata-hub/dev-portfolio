@@ -2,7 +2,9 @@ import LiquidChrome from './LiquidChrome';
 
 // Stable reference so the WebGL context isn't torn down and rebuilt on
 // every parent re-render (LiquidChrome's effect depends on this array).
-const BASE_COLOR: [number, number, number] = [0.08627450980392157, 0.08627450980392157, 0.11372549019607843];
+// Darker than the component's stock default so the swirl reads as a dim
+// ambient texture rather than a bright competing background.
+const BASE_COLOR: [number, number, number] = [0.045, 0.045, 0.06];
 
 /**
  * Pins <LiquidChrome /> as a full-viewport ambient background behind the

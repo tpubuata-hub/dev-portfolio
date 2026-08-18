@@ -1,9 +1,11 @@
 import { contacts } from '../data/content';
+import SectionBlur from './SectionBlur';
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-black/60 backdrop-blur-sm py-12 px-6">
-      <div className="max-w-6xl mx-auto">
+    <footer className="relative border-t border-white/10 bg-black/80 backdrop-blur-sm py-12 px-6">
+      <SectionBlur />
+      <div className="relative z-10 max-w-6xl mx-auto">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           <div>
             <div className="text-xl font-bold mb-4">{contacts.brand.toUpperCase()}</div>
