@@ -40,6 +40,21 @@ html {
   background: radial-gradient(ellipse at center, transparent 30%, rgba(0, 0, 0, 0.85) 100%);
 }
 
+/* Idle "breathing" glow for the orbital logo core (OrbitalLogo.tsx) — a
+   slow pulse so the mark reads as alive even when nothing is hovered. */
+@keyframes orbital-breathe {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 4px rgba(168, 85, 247, 0.35));
+  }
+  50% {
+    filter: drop-shadow(0 0 11px rgba(168, 85, 247, 0.7));
+  }
+}
+.orbital-core {
+  animation: orbital-breathe 4.5s ease-in-out infinite;
+}
+
 /* Placed as the first (absolutely-positioned) child inside a
    `position: relative` section. Frosts whatever shows through behind the
    section — strongest right at the section's top/bottom divider lines,

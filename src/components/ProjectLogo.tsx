@@ -9,10 +9,9 @@ interface ProjectLogoProps {
 
 // Original, generic geometric marks — one per case study, tied to what the
 // project name evokes (a swirl for "Vortex", a crescent for "Luna", a
-// sunrise for "Horizon"...). Deliberately monochrome / currentColor so
-// every card renders its mark in the same palette as the rest of the
-// site, regardless of the card's own gradient — that's what keeps them
-// reading as one cohesive set while scrolling instead of six random logos.
+// planet bisected by a horizon line for "Horizon"...). Pure currentColor
+// strokes/fills so every mark can be recolored uniformly wherever it's
+// used (see OrbitalLogo) instead of reading as six unrelated logos.
 const paths: Record<LogoKey, ReactNode> = {
   vortex: (
     <g strokeLinecap="round">
@@ -28,12 +27,17 @@ const paths: Record<LogoKey, ReactNode> = {
       <path d="M26 12l12 12-12 12" />
     </g>
   ),
-  luna: <path d="M28 8a16 16 0 1 0 0 32 12 12 0 0 1 0-32z" fill="currentColor" stroke="none" />,
+  luna: (
+    <path
+      d="M42 25.58A18 18 0 1 1 22.42 6 14 14 0 0 0 42 25.58z"
+      fill="currentColor"
+      stroke="none"
+    />
+  ),
   horizon: (
     <g strokeLinecap="round">
-      <path d="M12 26a12 12 0 0 1 24 0" fill="currentColor" stroke="none" />
-      <line x1="6" y1="34" x2="42" y2="34" />
-      <line x1="11" y1="40" x2="37" y2="40" />
+      <circle cx="24" cy="24" r="13" />
+      <line x1="5" y1="24" x2="43" y2="24" />
     </g>
   ),
   sync: (
