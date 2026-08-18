@@ -1,4 +1,5 @@
 import { projects } from '../data/content';
+import ProjectLogo from './ProjectLogo';
 import SectionBlur from './SectionBlur';
 
 export default function Portfolio() {
@@ -19,10 +20,12 @@ export default function Portfolio() {
                 <div
                   className={`bg-gradient-to-br ${project.color} h-64 md:h-96 flex items-center justify-center relative overflow-hidden`}
                 >
-                  <div className="relative z-10 text-center">
-                    <div className="text-white/40 text-sm mb-4">Project {project.id}</div>
-                    <div className="text-4xl font-bold text-white/20">
-                      {project.title.substring(0, 3)}
+                  <div className="relative z-10 flex flex-col items-center gap-4 text-center">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-white/10 border border-white/25 backdrop-blur-sm text-white shadow-lg shadow-black/20">
+                      <ProjectLogo name={project.logo} className="h-8 w-8" />
+                    </div>
+                    <div className="text-sm font-semibold uppercase tracking-[0.25em] text-white/80">
+                      {project.brand}
                     </div>
                   </div>
                 </div>

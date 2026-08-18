@@ -1,5 +1,9 @@
+import type { LogoKey } from '../components/ProjectLogo';
+
 export interface Project {
   id: number;
+  brand: string;
+  logo: LogoKey;
   title: string;
   category: string;
   description: string;
@@ -11,6 +15,8 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
+    brand: 'Vortex',
+    logo: 'vortex',
     title: 'Vortex — SaaS платформа для управления проектами',
     category: 'SaaS / Full Stack',
     description:
@@ -25,6 +31,8 @@ export const projects: Project[] = [
   },
   {
     id: 2,
+    brand: 'Nexo',
+    logo: 'nexo',
     title: 'Nexo — E-commerce для электроники',
     category: 'E-commerce / Frontend',
     description:
@@ -39,6 +47,8 @@ export const projects: Project[] = [
   },
   {
     id: 3,
+    brand: 'Momentum',
+    logo: 'momentum',
     title: 'Momentum — Аналитическая платформа для маркетологов',
     category: 'Analytics / Dashboard',
     description:
@@ -53,6 +63,8 @@ export const projects: Project[] = [
   },
   {
     id: 4,
+    brand: 'Luna',
+    logo: 'luna',
     title: 'Luna — Мобильное приложение для фитнеса',
     category: 'React Native / Mobile',
     description:
@@ -67,6 +79,8 @@ export const projects: Project[] = [
   },
   {
     id: 5,
+    brand: 'Horizon',
+    logo: 'horizon',
     title: 'Horizon — Корпоративный портал для финтеха',
     category: 'Enterprise / Security',
     description:
@@ -81,6 +95,8 @@ export const projects: Project[] = [
   },
   {
     id: 6,
+    brand: 'Sync',
+    logo: 'sync',
     title: 'Sync — CRM система для B2B продаж',
     category: 'CRM / Backend',
     description:
